@@ -1,0 +1,396 @@
+body{
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+.mainpage{
+     background: url("https://i.pinimg.com/1200x/6f/b2/07/6fb207c3d7ff98e55665553aedf14e1c.jpg") no-repeat center center/cover;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    color: white;
+   display: flex;
+   flex-direction: column;  
+    position: relative;
+    z-index: 1;
+}
+.mainpage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: inherit;   /* copies the same background image */
+  filter: blur(0.2px);  /* slight blur */
+  z-index: 0;            /* keep it behind text */
+}
+
+.nav-head{
+    display: flex;
+    height: 55px;
+    margin-top: 5px;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;           /* above blurred background */
+    z-index: 1;
+}
+.net-logo{
+    background-image: url("netflix1.logo.png");
+    height: 50px;
+    width: 150px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-top: 0.8rem;
+   
+}    
+
+
+.lang-login {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* space between dropdown and button */
+}
+
+
+
+
+.signin {
+  background-color: #E50914;
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 0.4rem 1rem;
+  margin-right: 10px;
+  border-radius: 4px;
+}
+.signin:hover{
+  background-color: rgba(229, 9, 20,0.86);
+}
+.lang-select {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 6px 12px 6px 12px;
+  border-radius: 4px;
+}
+
+.herotext{
+  flex: 1;                     
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;         
+  text-align: center;   
+  
+  position: relative;           /* above blurred background */
+  z-index: 1;
+}
+
+
+.m1{
+    color: #ffffff;
+    font-size: 45px;
+    margin: 0;
+    line-height: 1.1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+}
+.m2{
+    color: #ffffff;
+     margin-top: 20px;
+    font-size: 17px;
+    line-height: 1.1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.m3{
+    margin-top: 10px;
+    font-size: 17px;
+    color: #ffffff;
+    line-height: 1.1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.GetStarted{
+  background-color: #E50914;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  padding: 0.4rem 1rem;
+  border-radius: 4px;
+}
+.GetStarted:hover{
+  background-color: rgba(229, 9, 20,0.85);
+}
+.separator {
+  border: 2px solid #E50914;
+  height: 6px;
+  background-color: #E50914; /* Netflix-style dark gray line */
+  margin: 0;
+}
+.mrtj{
+  padding-top: 30px;
+  font-size: 18px;
+  color: white;
+  margin-left: 65px;
+}
+.mrtjr{
+  margin-left: 65px;
+  margin-right: 65px;
+  background-color: black;
+  color: white;
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.mrtjb{
+  width: 180px;          /* 📏 good width for desktop */
+  height: 230px;         /* 📏 balanced height */
+  background-color: #070b23;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+.mrtjb:hover{
+   transform: scale(1.05);
+}
+.mrtjb h5 {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+.mrtjb p {
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}
+.faq{
+  padding-top: 0px;
+  font-size: 18px;
+  color: white;
+  text-align: left;
+  margin-left: 65px; 
+}
+.faqq {
+  background-color: black;
+  color: white;
+  padding: 30px 0;
+  margin-left: 65px;
+  margin-right: 65px;
+}
+
+/* Remove default borders */
+.accordion-item {
+  border: none;
+  background-color: black;
+  margin-bottom: 10px;
+   border-radius: 0  /* vertical gap between questions */
+}
+
+/* Make the question button black */
+.accordion-button {
+  background-color: #2b2b2b; /* dark gray like Netflix */
+  color: white;
+  border: none;
+  box-shadow: none;
+  border-radius: 0 
+}
+
+/* When active (opened) */
+.accordion-button:not(.collapsed) {
+  background-color: #414141; /* slightly lighter for active question */
+  color: white;
+  box-shadow: none;
+   border-radius: 0 
+}
+
+/* Remove white focus outline */
+.accordion-button:focus {
+  box-shadow: none;
+  border-color: transparent;
+}
+
+/* Accordion body (answer) */
+.accordion-body {
+  background-color: #000; /* pure black for answers */
+  color: white;
+   border-radius: 0 
+}
+.question{
+  color: white;
+  text-align: left;
+  margin-left: 65px;
+  font-size: 14px;
+}
+.footpanel {
+  color: white;
+  height: 150px;
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 20px;
+  background-color: black; /* optional, helps visibility */
+  margin-bottom: 0px;
+  padding-bottom: 0px ;
+}
+
+.footpanel ul {
+  list-style: none; /* removes bullets */
+  padding: 0;
+  margin-bottom: 0px;
+  padding-bottom: 0px ;
+}
+
+.footpanel ul li {
+  margin-bottom: 10px; /* adds gap between links */
+}
+
+.footpanel ul a {
+  display: block;
+  color: white;
+  font-size: 12px;
+  text-decoration: underline;
+  text-decoration-color: white;
+}
+
+.footpanel ul a:hover {
+  text-decoration: underline;
+  text-decoration-color: white;
+  opacity: 0.8; /* optional subtle hover effect */
+}
+.netflix{
+  color: #ffffff;
+  font-size: medium;
+  text-align: left;
+  margin-left: 65px;
+
+}
+.btn-submit{
+  background-color: #E50914;
+  color: #ffffff;
+}
+.btn-submit:hover{
+  background-color: rgba(229, 9, 20,0.85);
+}
+.carousel-item img {
+  height: 85vh; /* adjust image height */
+  object-fit: cover;
+  filter: brightness(65%); /* darken image for text visibility */
+}
+
+.carousel-caption-custom {
+  position: absolute;
+  bottom: 20%;
+  left: 8%;
+  color: white;
+  text-align: left;
+}
+
+.carousel-caption-custom h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.carousel-caption-custom p {
+  font-size: 1.1rem;
+  max-width: 500px;
+}
+
+.carousel-caption-custom .btn {
+  margin-top: 1rem;
+  font-weight: 600;
+  padding: 0.6rem 1.5rem;
+  border-radius: 4px;
+}
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 50vh;
+  }
+}
+.Movies-Name{
+  color: white; 
+  font-size: 22px;
+   text-align: left;
+   margin-top: 10px;
+}
+.movie-row{
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  padding: 0px;
+  gap: 10px;
+}
+.movie-poster{
+   width: 160px;          /* 📏 good width for desktop */
+   height: 230px; 
+   background-size: cover;
+   text-align: center;
+   transition: transform 0.3s;
+}
+.mov1{
+   background-image: url(salaar_poster.jpg);
+}
+.mov2{
+  background-image: url(gunturkaram_poster.jpg);
+}
+.mov3{
+   background-image: url(luckybhaskar_poster.jpg);
+}
+.mov4{
+   background-image: url(pushpa2_poster.jpeg);
+}
+.mov5{
+    background-image: url(rrr_poster.jpg);
+}
+.mov6{
+   background-image: url(kalki_poster.jpeg);
+}
+.ser1{
+  background-image: url(kurukshetra_poster.jpg);
+}
+.ser2{
+  background-image: url(peaky_poster.jpeg);
+}
+.ser3{
+  background-image: url(rananaidu_series.jpg);
+}
+.ser4{
+  background-image: url(friends_poster.jpg);
+}
+.ser5{
+  background-image: url(alicein_poster.jpg);
+}
+.ser6{
+  background-image: url(squidgame_poster.jpeg);
+}
+.em1{
+  background-image: url(interstellar_poster.jpeg);
+}
+.em2{
+  background-image: url(inception_poster.jpeg);
+}
+.em3{
+  background-image: url(tenet_poster.jpg);
+}
+.em4{
+  background-image: url(fightclub_poster.jpg);
+}
+.em5{
+  background-image: url(spiderman_poster.jpeg);
+}
+.em6{
+  background-image: url(openheimer_poster.jpg);
+}
+.movie-poster:hover{
+   transform: scale(1.05);
+}
+.Series-Name{
+  color: white; 
+  font-size: 22px;
+   text-align: left;
+   margin-top: 10px;
+  
+}

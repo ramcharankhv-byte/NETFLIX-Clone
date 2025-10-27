@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netflix Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- Netflix-like dark navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black px-4">
+        <a class="navbar-brand" href="index.html">
+            <img src="netflix.logo.png" alt="Netflix Logo" width="120" />
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Movies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">My List</a>
+                </li>
+            </ul>
+
+            <form class="d-flex" role="search">
+                <input class="form-control me-2 bg-dark text-white border-0" type="search" placeholder="Search" />
+                <button class="btn btn-submit" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+
+            <!-- Slide 1 -->
+            <div class="carousel-item active position-relative">
+                <img src="breakingbad_cover.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption-custom">
+                    <h2>Breaking Bad</h2>
+                    <p>A terminally ill chemistry teacher teams with a former student to manfacture crystal meth to
+                        secure his family's future..</p>
+                    <p>Genres:TV Dramas,Crime</p>
+                    <button class="btn btn-dark">
+                        Watch
+                    </button>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                        onclick="playTrailer('https://www.youtube.com/embed/HhesaQXLuRY?autoplay=1')">
+                        Play Trailer
+                    </button>
+
+                </div>
+
+
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="carousel-item position-relative">
+                <img src="moneyheist_cover.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption-custom">
+                    <h2>Money Heist</h2>
+                    <p>Eight thieves take hostages and lock themselves in the Royal Mint of Spain as a criminal
+                        mastermind manipulates the police to carry out his plan.</p>
+                    <p>Genres: Spanish,Crime Tv Shows,TV Thrillers</p>
+                    <button class="btn btn-dark">
+                        Watch
+                    </button>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                        onclick="playTrailer('https://www.youtube.com/embed/_InqQJRqGW4?autoplay=1')">
+                        Play Trailer
+                    </button>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="carousel-item position-relative">
+                <img src="https://assets-in.bmscdn.com/discovery-catalog/events/et00369074-nahbfahnzd-landscape.jpg"
+                    class="d-block w-100" alt="...">
+                <div class="carousel-caption-custom">
+                    <h2>They Call Him OG</h2>
+                    <p>After years of silence,his enemies thought he'd gone for good= but Ojas Gambheera is back, and
+                        he's out for revenge.</p>
+                    <p>Genres:Crime Movies,Action&Adventure Movies,Telugu-Language Movies</p>
+                    <button class="btn btn-dark">
+                        Watch
+                    </button>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                        onclick="playTrailer('https://www.youtube.com/embed/_8J8LwoVH_0?autoplay=1')">
+                        Play Trailer
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <div class="container text-center">
+        <div class="Movies-Name">Movies</div>
+        <div class="row row-cols-6 movie-row g-3">
+            <div class="col movie-poster mov1" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/9Im1q4gvk1M?autoplay=1')">
+            </div>
+            <div class="col movie-poster mov2" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/q8M6Ybjr2Wc?autoplay=1')">
+            </div>
+            <div class="col movie-poster mov3" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/Kv5RKsqVe-Y?autoplay=1')">
+            </div>
+            <div class="col movie-poster mov4" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/MSNL6OIr9kU?autoplay=1')">
+            </div>
+            <div class="col movie-poster mov5" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/NgBoMJy386M?autoplay=1')">
+            </div>
+            <div class="col movie-poster mov6" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/aninoDcPWo4?autoplay=1')">
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="Series-Name">Series</div>
+        <div class="row row-cols-6 movie-row g-3">
+            <div class="col movie-poster ser1" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/QpJSf-3TPfA?autoplay=1')">
+            </div>
+            <div class="col movie-poster ser2" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/oVzVdvGIC7U?autoplay=1')">
+            </div>
+            <div class="col movie-poster ser3" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/wbEWbAKo29Q?autoplay=1')">
+            </div>
+            <div class="col movie-poster ser4" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/IEEbUzffzrk?autoplay=1')">
+            </div>
+            <div class="col movie-poster ser5" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/49_44FFKZ1M?autoplay=1')">
+            </div>
+            <div class="col movie-poster ser6" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/oqxAJKy0ii4?autoplay=1')">
+            </div>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="Series-Name">English Movies </div>
+        <div class="row row-cols-6 movie-row g-3">
+            <div class="col movie-poster em1" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/zSWdZVtXT7E?autoplay=1')">
+            </div>
+            <div class="col movie-poster em2" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/YoHD9XEInc0?autoplay=1')">
+            </div>
+            <div class="col movie-poster em3" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/L3pk_TBkihU?autoplay=1')">
+            </div>
+            <div class="col movie-poster em4" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/qtRKdVHc-cE?autoplay=1')">
+            </div>
+            <div class="col movie-poster em5" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/JfVOs4VSpmA?autoplay=1')">
+            </div>
+            <div class="col movie-poster em6" data-bs-toggle="modal" data-bs-target="#trailerModal"
+                onclick="playTrailer('https://www.youtube.com/embed/uYPbbksJxIg?autoplay=1')">
+            </div>
+        </div>
+
+    </div>
+    <div class="modal fade" id="trailerModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark">
+                <div class="modal-body p-0">
+                    <iframe id="trailerVideo" width="100%" height="400" src="" title="YouTube video" frameborder="0"
+                        allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
