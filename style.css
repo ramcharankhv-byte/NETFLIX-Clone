@@ -276,18 +276,18 @@ body{
   background-color: rgba(229, 9, 20,0.85);
 }
 .carousel-item img {
-  height: 85vh; /* adjust image height */
+  height: 45vh; /* adjust image height */
   object-fit: cover;
   filter: brightness(65%); /* darken image for text visibility */
 }
-
 .carousel-caption-custom {
   position: absolute;
-  bottom: 20%;
+  bottom: 8%; /* ↓ lower text */
   left: 8%;
   color: white;
   text-align: left;
 }
+
 
 .carousel-caption-custom h2 {
   font-size: 2.5rem;
@@ -317,7 +317,7 @@ body{
    margin-top: 10px;
 }
 .movie-row{
-  margin-left: 0px;
+  margin-left: 30px;
   margin-top: 0px;
   margin-right: 0px;
   padding: 0px;
