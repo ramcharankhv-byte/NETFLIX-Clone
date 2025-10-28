@@ -268,6 +268,7 @@ body{
   margin-left: 65px;
 
 }
+/* Portal blog */
 .btn-submit{
   background-color: #E50914;
   color: #ffffff;
@@ -275,7 +276,18 @@ body{
 .btn-submit:hover{
   background-color: rgba(229, 9, 20,0.85);
 }
+.herosection{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.carousel {
+  width: 100%;       /* ensure carousel fills parent width */
+}
 .carousel-item img {
+  width: 100%;
   height: 45vh; /* adjust image height */
   object-fit: cover;
   filter: brightness(65%); /* darken image for text visibility */
@@ -305,10 +317,12 @@ body{
   padding: 0.6rem 1.5rem;
   border-radius: 4px;
 }
-@media (max-width: 768px) {
-  .carousel-item img {
-    height: 50vh;
-  }
+
+
+.content{
+   display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .Movies-Name{
   color: white; 
@@ -317,7 +331,7 @@ body{
    margin-top: 10px;
 }
 .movie-row{
-  margin-left: 0px;
+  margin-left: 10px;
   margin-top: 0px;
   margin-right: 0px;
   padding: 0px;
@@ -394,5 +408,43 @@ body{
    margin-top: 10px;
   
 }
+@media (max-width: 768px) {
+  .movie-row {
+    justify-content: center; /* centers the row items */
+    margin: 0 auto;          /* equal left-right margin */
+    width: 100%;
+  }
 
+  .movie-poster {
+    width: 140px;
+  }
 
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+/* Full screen overlay */
+    #loadingScreen {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: #141414; /* Netflix dark background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      color: white;
+      font-size: 1.5rem;
+      flex-direction: column;
+    }
+
+    /* Optional: fade out animation */
+    #loadingScreen.fade-out {
+      opacity: 0;
+      transition: opacity 2.5s ease;
+      pointer-events: none;
+    }
+
+    
